@@ -1,0 +1,88 @@
+.product{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 24px;
+    width: 100%;
+    cursor: pointer;
+    min-width: 100px;
+    transition: box-shadow 0.5s ease;
+}
+.product__info{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.product__info .product__basketIcon{
+    font-size: 2rem !important;
+}
+.product:hover {
+    box-shadow: -3px 2px 15px 15px #000000;
+}
+.product:hover .product__info{
+    background: #00000067;
+    opacity: 1;
+}
+.product:hover {
+    box-shadow: #846a29;
+}
+.product__info p:first-child{
+    top: 25px;
+    position: absolute;
+    left: 25px;
+    color: #302e2e;
+    font-size: 25px;
+    font-weight: bold;
+}
+.product__price{
+    margin-top: 5px;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #302e2e;
+}
+.product__rating{
+    display: flex;
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}
+.product__star{
+    color: #f0c14b;
+}
+.product > img {
+    z-index: 1;
+    width: 100%;
+    object-fit: contain;
+}
+.product__basketIconWrapper{
+    position: absolute;
+    color: #fff;
+    align-items: center;
+    display: flex;
+    top: 25px;
+    right: 25px;
+    padding: 3px 5px;
+    border-radius: 30px;
+    transition: background-color 0.5s ease;
+
+}
+.product__basketIconWrapper > div{
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.product__basketIconWrapper:hover{
+    background-color: #c7c9c954;
+    color: #F0C14B;
+}
+.product__basketIconWrapper:hover > div{
+    opacity: 1;
+}

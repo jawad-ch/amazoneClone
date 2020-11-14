@@ -1,0 +1,143 @@
+.checkout{
+    display: flex;
+    padding: 20px;
+    height: max-content;
+    background-color: white;
+}
+
+.checkout__ad{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.checkout__left{
+    flex: 1;
+}
+
+/* checkout product */
+
+.checkout__products{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.checkoutProduct{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+    height: 100%;
+}
+.checkoutProduct__img{
+    max-width: 180px;
+    max-height: 121px;
+    object-fit: contain;
+}
+
+.checkoutProduct__info{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.checkoutProduct__price{
+    position: absolute;
+    left: 25px;
+    bottom: 12px;
+}
+.checkoutProduct__removeBasketIconWrapper{
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 3px 5px;
+    transition: background-color 0.5s ease;
+    position: absolute;
+    right: 25px;
+    top: -2px;
+}
+.checkoutProduct__removeBasketIconWrapper:hover{
+    color: red;
+}
+
+.checkoutProduct__rating{
+    display: flex;
+    position: absolute;
+    right: 25px;
+    bottom: 12px;
+}
+.checkoutProduct__star{
+    color: #f0c14b;
+}
+
+.checkoutProduct__title{
+    font-size: 17px;
+    font-weight: 800;
+    position: absolute;
+    left: 25px;
+    top: -2px;
+}
+
+/* 682 */
+@media (max-width: 1150px){
+    .checkout__products{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media (max-width: 900px){
+    .checkout{
+        flex-direction: column;
+    }
+    .checkout__right{
+        margin-top: 40px;
+        align-items: flex-end;
+    }
+    .subtotal{
+        float: right;
+    }
+}
+/* subtotal */
+.subtotal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 200px;
+    padding: 20px 20px 5px 20px;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    position: sticky;
+    top: 5rem;
+}
+
+.subtotal p{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.subtotal__gift{
+    display: flex;
+    align-items: center;
+}
+
+.subtotal__gift > input {
+    margin-left: 5px;
+}
+
+.subtotal  button{
+    cursor: pointer;
+    background: #f0c14b;
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7c31 #846a29;
+    color: #111;
+}
+.subtotal  button:focus{
+    outline: none;
+    border: none;
+}
